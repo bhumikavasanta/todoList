@@ -1,10 +1,10 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: #b892ff;
+  background-color: #6d6875;
 }
 body{
-  background-color: rgb(40, 40, 40);
+  background-color: #6d6875;
 }
 .main-container{
   display: flex;
@@ -15,7 +15,7 @@ body{
 .center-container-outer {
   height: 60%;
   width: 50%;
-  border: 2px solid #7209b7;
+  border: 4px solid #ffcdb2;
   border-radius: 20px;
   padding: 5px 10px 30px 5px;
 }
@@ -35,13 +35,13 @@ body{
 }
 
 .center-container::-webkit-scrollbar-thumb {
-  background: #7209b7;
+  background: #ffcdb2;
   border-radius: 6px;
 }
 
 .app-heading{
   padding: 4px;
-  color: #7209b7;  
+  color: #ffcdb2;  
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
@@ -56,12 +56,12 @@ body{
   width: 70%;
   height: 40px;
   border-radius: 14px;
-  border:1px solid #7209b7;
+  border:2px solid #ffcdb2;
   padding-left: 10px;  
   box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
   outline: none;
   font-size: large;
-  color: #7209b7;
+  color: #ffcdb2;
   font-weight: bold;
 }
 .add-btn{
@@ -69,8 +69,8 @@ body{
   height:40px;
   border-radius: 1rem;
   border:none;
-  background-color:#7209b7;
-  color: #b892ff;
+  background-color:#ffcdb2;
+  color: #6d6875;
   font-weight: bolder;
   font-size: larger;
   margin-left: 10px;  
@@ -80,6 +80,9 @@ body{
   width: fit-content;
   text-wrap: nowrap;
   padding: 0 0.5rem;
+}
+::placeholder {
+  color: #ffcdb2;
 }
 .add-btn:active{
   box-shadow: none;
@@ -91,8 +94,8 @@ body{
 }
 .list-item{
   list-style-type: none;
-  border:2px solid #7209b7;
-  color: #7209b7;
+  border:2px solid #ffcdb2;
+  color: #ffcdb2;
   padding:10px;
   padding-left: 5px;
   border-radius: 5px; 
