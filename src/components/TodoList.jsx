@@ -4,9 +4,19 @@ const TodoList = (props) => {
   const { task, deleteTask, index } = props;
   return (
     <li className="list-item">
-      {task}
+      <div>
+      <div className='task-name'>{task.name}</div>
+      <div>{task.timeStamp.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  })}</div>
+      </div>
       <span className='icons'>
-      <i class="fa-solid fa-trash icon-delete" onClick={e=>{
+      <i className="fa-solid fa-trash icon-delete" onClick={e=>{
         deleteTask(index)
       }}></i>
       </span>

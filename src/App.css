@@ -1,21 +1,22 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: #6d6875;
+  background-color: #003554;
 }
 body{
-  background-color: #6d6875;
+  background-color: #003554;
 }
 .main-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 10%;
+  /* height: 100vh; */
 }
 .center-container-outer {
-  height: 60%;
-  width: 50%;
-  border: 4px solid #ffcdb2;
+  /* height: 60%; */
+  width: 80%;
+  border: 4px solid #f5efe0;
   border-radius: 20px;
   padding: 5px 10px 30px 5px;
 }
@@ -31,17 +32,17 @@ body{
 }
 
 .center-container::-webkit-scrollbar-track {
-  background: #b892ff;
+  background: #f5efe0;
 }
 
 .center-container::-webkit-scrollbar-thumb {
-  background: #ffcdb2;
+  background: #f5efe0;
   border-radius: 6px;
 }
 
 .app-heading{
   padding: 4px;
-  color: #ffcdb2;  
+  color: #f5efe0;  
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
@@ -56,12 +57,12 @@ body{
   width: 70%;
   height: 40px;
   border-radius: 14px;
-  border:2px solid #ffcdb2;
+  border:2px solid #f5efe0;
   padding-left: 10px;  
   box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
   outline: none;
   font-size: large;
-  color: #ffcdb2;
+  color: #f5efe0;
   font-weight: bold;
 }
 .add-btn{
@@ -69,8 +70,8 @@ body{
   height:40px;
   border-radius: 1rem;
   border:none;
-  background-color:#ffcdb2;
-  color: #6d6875;
+  background-color:#f5efe0;
+  color: #003554;
   font-weight: bolder;
   font-size: larger;
   margin-left: 10px;  
@@ -82,7 +83,7 @@ body{
   padding: 0 0.5rem;
 }
 ::placeholder {
-  color: #ffcdb2;
+  color: #f5efe0;
 }
 .add-btn:active{
   box-shadow: none;
@@ -94,8 +95,8 @@ body{
 }
 .list-item{
   list-style-type: none;
-  border:2px solid #ffcdb2;
-  color: #ffcdb2;
+  border:2px solid #f5efe0;
+  color: #f5efe0;
   padding:10px;
   padding-left: 5px;
   border-radius: 5px; 
@@ -107,10 +108,11 @@ body{
   margin-top: 10px;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  justify-content: space-between;
 }
 .icons{
-  position: absolute;
-  right: 10px;
+  /* position: absolute; */
+  /* right: 10px; */
 }
 .icons i{
   margin: 4px;
@@ -122,4 +124,9 @@ body{
 }
 .icon-delete:hover{
   color: black;
+}
+.task-name {
+  overflow-wrap: break-word;
+  font-size: x-large;
+  padding-bottom: 1px;
 }

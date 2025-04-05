@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
@@ -8,8 +8,12 @@ function App() {
   const [taskList, setTaskList] = useState([]);
 
   const addTask = (task) => {
+    const newTask = {
+      name: task,
+      timeStamp: new Date(),
+    }
     if (task !== "") {
-      setTaskList([...taskList, task]);
+      setTaskList([...taskList, newTask]);
     } else {
       alert("Enter Task");
     }
@@ -20,6 +24,10 @@ function App() {
     newTaskList.splice(key, 1);
     setTaskList([...newTaskList]);
   };
+
+  useEffect(()=>{
+    console.log(taskList);
+  },[taskList]);
 
   return (
     <div className="main-container">
