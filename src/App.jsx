@@ -5,7 +5,24 @@ import TodoList from './components/TodoList';
 
 function App() {
 
-  const [taskList, setTaskList] = useState([]);
+  const [taskList, setTaskList] = useState(() => {
+    const storedTasks = localStorage.getItem("taskList");
+    try {
+      const storedTasks = localStorage.getItem("taskList");
+      if (storedTasks) {
+        const parsed = JSON.parse(storedTasks);
+        if (Array.isArray(parsed)) {
+          return parsed.map((task) => ({
+            ...task,
+            timeStamp: new Date(task.timeStamp),
+          }));
+        }
+      }
+    } catch (err) {
+      console.error("Failed to load taskList from localStorage:", err);
+    }
+    return [];
+  });
 
   const addTask = (task) => {
     const newTask = {
@@ -26,7 +43,7 @@ function App() {
   };
 
   useEffect(()=>{
-    console.log(taskList);
+    localStorage.setItem("taskList",JSON.stringify(taskList));
   },[taskList]);
 
   return (
@@ -38,7 +55,7 @@ function App() {
         </h1>
         <TodoInput addTask={addTask} />
         {
-          taskList.map((item, i) => {
+          taskList?.map((item, i) => {
             return (
               <TodoList
                 key={i}
